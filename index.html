@@ -1,12 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/1599d6604b.js" crossorigin="anonymous"></script>
+
+
+
 </head>
+
 <body>
-    
+    <header>
+        <div class="logo">
+           <a href="index.html"></a><img src="img/logo.png" alt=""></a>
+        </div>
+        <nav class="nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">contact us</a></li>
+            <li><a href="#">become a Seller</a></li>
+        </nav>
+        <div class="cart">
+            <a href=""><i class="fas fa-shopping-cart"></i></a>
+        </div>
+    </header>
+    <main>
+        <div class="photoBanner">
+            <div class="slidePhoto">
+
+                <input type="radio" name="radio-btn" id="r1">
+                <input type="radio" name="radio-btn" id="r2">
+                <input type="radio" name="radio-btn" id="r3">
+                <input type="radio" name="radio-btn" id="r4">
+
+                <div class="slide first">
+                    <img src="./img/1.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./img/2.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./img/3.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./img/4.jpg" alt="">
+                </div>
+
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
+                </div>
+
+            </div>
+
+            <div class="navigation-manual">
+                <label for="r1" class="manual-btn"></label>
+                <label for="r2" class="manual-btn"></label>
+                <label for="r3" class="manual-btn"></label>
+                <label for="r4" class="manual-btn"></label>
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+    </main>
+
+    <footer>
+        <p>Copy right &copy; 2021</p>
+
+    </footer>
+
+
+
+
+
+    <script src="js/banner.js"></script>
 </body>
+
 </html>
