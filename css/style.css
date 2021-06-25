@@ -11,9 +11,17 @@
   
 
   header {
-    display: flex;
-     margin-bottom: 10px;
-     
+
+  
+
+      display: flex;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 0;
+  }
+  .logo {
+      display: flex;
+
   }
  
 
