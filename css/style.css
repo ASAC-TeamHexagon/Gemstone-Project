@@ -1,13 +1,19 @@
 
 * {
-    padding: 0;
-    margin: 0;
-  }
+  padding: 0;
+  margin: 0;}
+
   body {
-      width: 1200px;
-      margin: auto;
-  }
+    width: 1200px;
+    margin: auto;
+}
+
+  
+
   header {
+
+  
+
       display: flex;
       margin-bottom: 20px;
       position: relative;
@@ -15,60 +21,58 @@
   }
   .logo {
       display: flex;
+
   }
+ 
+
   .logo img {
-      width: 200px;
-      height: 200px;
-      flex: 1;
-      cursor: pointer;
+    width: 200px;
+    height: 200px;
+    flex: 1;
+    cursor: pointer;
   }
   .nav {
-      display: flex;
-      flex: 2;
-      justify-content: space-evenly;
-      align-items: center;
+     display: flex;
+     flex: 2;
+    justify-content: space-evenly;
+    align-items: center;
   }
   .nav li {
-      list-style: none;
-      position: relative;
+    list-style: none;
+     position: relative;
   }
   .nav a {
-      text-decoration: none;
-      font-size: 23px;
-      color: rgba(0, 0, 0, 0.7);
-      font-weight: 600;
-      text-transform: capitalize;
+    text-decoration: none;
+    font-size: 23px;
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: 600;
+    text-transform: capitalize;
   }
   .cart {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
   }
   .cart a i {
-      font-size: 30px;
-      color: rgba(218, 165, 32, 0.589);
+    font-size: 30px;
+     color: rgba(218, 165, 32, 0.589);
   }
   .nav li::after {
-      content: '';
-      height: 2px;
-      width:  0%;
-      background-color: rgb(196, 176, 63);
-      display: block;
-      transition: .7s;
-      margin: auto;
+    content: '';
+    height: 2px;
+    width:  0%;
+    background-color: rgb(196, 176, 63);
+    display: block;
+    transition: .7s;
+    margin: auto;
   }
   .nav li:hover::after {
-      width: 100%;
+    width: 100%;
   }
 
-
-
-
-
   main{
-    
-    height: 100vh;
+    height: max-content;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,10 +80,13 @@
   }
   
   .photoBanner{
+   position:relative;
     width: 1200px;
     height: 500px;
     border-radius: 10px;
     overflow: hidden;
+    margin-bottom: 30px;
+    
   }
   
   .slidePhoto{
@@ -102,9 +109,7 @@
     height: 500px;
     opacity: 0.9
   }
-  
-  
-  
+    
   .navigation-manual{
     position: absolute;
     width: 1200px;
@@ -145,9 +150,120 @@
     margin-left: -60%;
   }
 
+  .navigation-auto{
+    position: absolute;
+    display: flex;
+    width: 1200px;
+    justify-content: center;
+    margin-top: 460px;
+  }
+  
+  .navigation-auto div{
+    border: 2px solid #40D3DC;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+  }
+  
+  .navigation-auto div:not(:last-child){
+    margin-right: 40px;
+  }
+  
+  #r1:checked ~ .navigation-auto .auto-btn1{
+    background: #40D3DC;
+  }
+  
+  #r2:checked ~ .navigation-auto .auto-btn2{
+    background: #40D3DC;
+  }
+  
+  #r3:checked ~ .navigation-auto .auto-btn3{
+    background: #40D3DC;
+  }
+  
+  #r4:checked ~ .navigation-auto .auto-btn4{
+    background: #40D3DC;
+  }
+
+
+
+
+
+
+ /* cards style  */
+
+  .Container{
+    position: absolute;
+    display: flex;
+    flex: auto;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background: rgb(180, 71, 71);
+    
+}
+.Container .card {
+position: relative;
+max-width: 300px;
+height: 215px;
+background: chocolate;
+margin: 30px 30px;
+padding: 20px 15px;
+display: flex;
+flex-direction: column;
+box-shadow: 0 5px 20px rgb(0,0,0,0.5);
+transition: 0.3s ease-in-out;
+border-radius: 5px;
+
+}
+
+.Container .card:hover{
+    height: 420px
+}
+
+.Container .card .imgBx
+{
+position: relative;
+width: 260px;
+height: 260px;
+top: -60px;
+left:20px;
+z-index:1;
+box-shadow: 0 5px 20px rgb(0,0,0,0.2);
+}
+.Container .card .imgBx img{
+
+max-width: 100%;
+border-radius: 4px;
+
+
+}
+.Container .card .content{
+
+    position: relative;
+    margin-top: -140px;
+    padding: 10px 15px;
+    text-align: center;
+    color: #111;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+
+}
+.Container .card:hover .content{
+    visibility: visible;
+    opacity: 1;
+    margin-top: -40px;
+    transition-delay: 0.3s;
+    
+}
+
+
   footer{
+    
     display:flex;
     background-color: rgba(218, 165, 32, 0.589);
     padding :20px;
+    
 
   }
