@@ -1,15 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap');
 * {
   padding: 0;
   margin: 0;
-  font-family: 'Poppins', sans-serif;
 
 }
 
 body {
   width: 1200px;
   margin: auto;
+  font-family: 'Raleway', sans-serif;
 }
 
 header {
@@ -17,7 +16,6 @@ header {
   margin-bottom: 10px;
   position: relative;
   z-index: 0;
-  font-family: 'Poppins', sans-serif;
 }
 
 .logo {
@@ -55,8 +53,8 @@ header {
 .nav a {
   text-decoration: none;
   font-size: 22px;
-  color: rgb(30, 30, 66);
-  font-weight: 500;
+  color: rgb(29, 29, 77);
+  font-weight: 600;
   text-transform: capitalize;
 }
 .nav li:nth-child(1){
@@ -113,14 +111,19 @@ header {
 }
 .cart {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   flex: 1;
 }
 .cart a i {
   font-size: 30px;
-  color: rgba(218, 165, 32, 0.589);
+  color: rgb(218 165 32 / 70%);
   animation: icon 1s linear;
+  transition: .7s;
+}
+.cart a i:hover{
+  color: rgb(29, 29, 77);
+  font-size: 35px;
 }
 @keyframes icon {
   0%{
@@ -137,13 +140,32 @@ header {
   content: "";
   height: 2px;
   width: 0%;
-  background-color: rgb(223, 207, 118);
+  background-color: rgb(218 165 32 / 70%);
   display: block;
   transition: 0.7s;
   margin: auto;
 }
 .nav li:hover::after {
   width: 100%;
+}
+
+.cart button {
+  width: 100px;
+  height: 50px;
+  font-size: 18px;
+  border-radius: 15px;
+  background-color: #fff;
+  border: 3px solid  rgb(218 165 32 / 70%);
+  transition: .5s ease;
+  cursor: pointer;
+  color: rgb(218 165 32 / 70%);
+  font-weight: 500;
+}
+.cart button:hover {
+  width: 110px;
+  height: 55px;
+  border: 2px solid rgb(29, 29, 77);
+  color: rgb(29, 29, 77);
 }
 
 
@@ -154,7 +176,7 @@ header {
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 60px;
-  filter: drop-shadow(1px 2px 4px rgba(0, 0, 0, 0.5));
+  box-shadow: 0 2px 9px rgb(0, 0, 0, 0.2);
   animation: moved 2s linear ;
 }
 @keyframes moved {
@@ -365,4 +387,73 @@ header {
 footer {
   background-color: rgba(201, 189, 189, 0.774);
   line-height: 2;
+  height: 40vh;
+  background-color: rgb(23 23 53);
+  
+}
+footer h2 {
+  font-size: 19px;
+  font-weight: 600;
+  color: #fff;
+  margin-top: 20px;
+}
+.footer {
+  margin-left: 90px;
+  margin-right: 90px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.Company a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+  text-align: center;
+}
+.Company a:hover {
+  font-size: 20px;
+  color: rgb(218 165 32 / 98%);
+
+}
+.Contact {
+  text-align: center;
+}
+.Contact span {
+  color: rgb(218 165 32 / 98%);
+
+  font-size: 20px;
+}
+.Contact p {
+  font-size: 17px;
+  color: #fff;
+}
+.Contact a i {
+  display: inline-block;
+  font-size: 27px;
+  color: #fff;
+  padding: 15px 10px;
+  width: 20px;
+  height: 50px;
+}
+.Contact a i:hover {
+  color: rgb(218 165 32 / 98%);
+
+}
+.Address {
+  text-align: center;
+}
+.Address p {
+  font-size: 17px;
+  color: #fff;
+  font-weight: 600;
+}
+.rights {
+  text-align: center;
+  font-size: 17px;
+  color: #fff;
+  font-weight: 700;
+  margin-left: -50px;
 }
