@@ -21,60 +21,97 @@
         <nav class="nav">
             <li><a href="index.html">Home</a></li>
             <li><a href="#">Products</a></li>
-            <li><a href="#">contact us</a></li>
+            <li><a href="about us.html">about us</a></li>
         </nav>
         <div class="cart">
             <a href=""><i class="fas fa-shopping-cart"></i></a>
         </div>
     </header>
-    <div class="regform">
-        <h1>Registiration Form</h1>
-    </div>
-    <div class="main">
-        <form id="form">
-            <div id="name">
-                <h2 class="name">Name</h2>
-                <input class="firstname" type="text" name="first_name" placeholder="first name" required>
-                <input class="lastname" type="text" name="last_name" placeholder="last name" required>
 
+    <main class="topForm">
+            
+            <form id="form">
+                <div class="header">
+                    <h2>Name</h2>
+                </div>
+
+                <div class="name"></div>
+                <input type="text" name="first_name" placeholder="first name">
+                <input type="text" name="last_name" placeholder="last name">
+                </div>
+
+                <div class="header">
+                    <h2>Email</h2>
+                </div>
+
+                <div class="name1"></div>
+                    <input type="text" name="Email" placeholder="e.g @gmail.com">
+                </div>
+
+                <div class="header">
+                    <h2>password </h2>
+                </div>
+                <div class="name2"></div>
+                    <input type="text" name="password" placeholder="123-45-678">
+                </div>
+
+                <div class="header">
+                    <h2>Phone</h2>
+                </div>
+
+                <div class="name3"></div>
+                    <input type="text" name="phone" placeholder="123-45-678">
+                </div>
+
+                <div class="header">
+                    <h2>Product</h2>
+                </div>
+                    <select class="option" name="subject">
+                        <option disabled="disabled" selected="selected">--Choose option</option>
+                        <option>Precious Metalas</option>
+                        <option>Jewelry</option>
+                        <option>Gemstones</option>
+                    </select>
+                </div>
+
+                <div class="bnt">
+                    <button id="button" type="submit">Register</button>
+                </div>
+            </form>
+    </main>
+
+
+
+
+    <Footer>
+        <div class="footer">
+            <div class="Company">
+                <h2>Company</h2>
+                <a href="#">Home</a>
+                <a href="#">Products</a>
+                <a href="#">about us</a>
+                <a href="#">Register</a>
             </div>
-            <h2 class="name">Email</h2>
-            <input class="Email" type="text" name="Email" placeholder="e.g @gmail.com" required>
+            <div class="Contact">
+                <h2>Contact</h2>
+                <span>info@gemaholica.net</span>
+                <P>+962-796216929</P>
+                <a href=""><i class="fab fa-facebook"></i></a>
+                <a href=""><i class="fab fa-twitter"></i></a>
+                <a href=""><i class="fab fa-instagram-square"></i></a>
+                <a href=""><i class="fab fa-pinterest"></i></a>
+            </div>
+            <div class="Address">
+                <h2>Address</h2>
+                <p>#31 Mecca St.
+                    <br> Teletubbies Building <br> Amman, Jordan <br> 11183
+                </p>
+            </div>
+        </div>
+        <div class="rights">All Rights Reserved © 2021
+        </div>
+    </Footer>
 
-            <h2 class="name">password </h2>
-            <input class="password" type="text" name="password" placeholder="123-45-678" required>
-
-
-
-            <h2 class="name">Phone</h2>
-            <input class="number" type="text" name="phone" placeholder="123-45-678" required>
-
-
-            <h2 class="name">Product</h2>
-            <select class="option" name="subject">
-                <option disabled="disabled" selected="selected">--Choose option</option>
-                <option>Precious Metalas</option>
-                <option>Jewelry</option>
-                <option>Gemstones</option>
-            </select>
-            <button id="button" type="submit">Register</button>
-
-
-
-        </form>
-
-    </div>
-
-
-
-
-
-
-    <footer>
-        <div>ali</div>
-        <div>salamh</div>
-        <div>alhjou</div>
-    </footer>
 
     <script src="js/form.js"></script>
 </body>

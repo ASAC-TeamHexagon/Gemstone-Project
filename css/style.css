@@ -8,13 +8,13 @@ body {
     width: 1200px;
     margin: auto;
     font-family: "Raleway", sans-serif;
+    
 }
 
 header {
     display: flex;
     margin-bottom: 10px;
     position: relative;
-    z-index: 0;
 }
 
 .logo {
@@ -170,7 +170,7 @@ header {
     font-size: 18px;
     border-radius: 15px;
     background-color: #fff;
-    border: 3px solid rgb(218 165 32 / 70%);
+    border: 2px solid rgb(218 165 32 / 70%);
     transition: 0.5s ease;
     cursor: pointer;
     color: rgb(218 165 32 / 70%);
@@ -412,6 +412,7 @@ header {
 }
 
 footer {
+    width: 100%;
     background-color: rgba(201, 189, 189, 0.774);
     line-height: 2;
     height: 40vh;
