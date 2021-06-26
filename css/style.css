@@ -118,7 +118,7 @@ header {
 }
 
 .manual-btn {
-  border: 2px solid white;
+  border: 2px solid #E0E4EC;
   padding: 5px;
   border-radius: 10px;
   cursor: pointer;
@@ -130,7 +130,7 @@ header {
 }
 
 .manual-btn:hover {
-  background: white;
+  background: #E0E4EC;
 }
 
 #r1:checked ~ .first {
@@ -158,7 +158,7 @@ header {
 }
 
 .navigation-auto div {
-  border: 2px solid #40d3dc;
+  border: 2px solid #E0E4EC;
   padding: 5px;
   border-radius: 10px;
   transition: 1s;
@@ -169,19 +169,19 @@ header {
 }
 
 #r1:checked ~ .navigation-auto .auto-btn1 {
-  background: #40d3dc;
+  background: #E0E4EC;
 }
 
 #r2:checked ~ .navigation-auto .auto-btn2 {
-  background: #40d3dc;
+  background: #E0E4EC;
 }
 
 #r3:checked ~ .navigation-auto .auto-btn3 {
-  background: #40d3dc;
+  background: #E0E4EC;
 }
 
 #r4:checked ~ .navigation-auto .auto-btn4 {
-  background: #40d3dc;
+  background: #E0E4EC;
 }
 
 /* cards style  */
