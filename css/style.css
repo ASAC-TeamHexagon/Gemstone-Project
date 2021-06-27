@@ -455,16 +455,16 @@ header {
     color: #fff;
 }
 
+
 footer {
     width: 100%;
-    background-color: rgba(201, 189, 189, 0.774);
     line-height: 2;
     height: 40vh;
     background-color: rgb(23 23 53);
 }
 
 footer h2 {
-    font-size: 19px;
+    font-size: 23px;
     font-weight: 600;
     color: #fff;
     margin-top: 20px;
