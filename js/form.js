@@ -23,7 +23,9 @@ let first_name = event.target.first_name.value;
   let password = event.target.password.value;
   let phone = event.target.phone.value;
   let subject = event.target.subject.value;
-  alert(`Hello ${first_name} ${last_name}, registration confirmed, please return to home Page to serve you !!! `);
+  swal("Good job!", "Your submit done!", "success");
+
+  // window.location.assign('index.html')
 
 //   let newForm = new Gemstone(first_name,last_name,company,Email,area_code,phone,subject);
 
