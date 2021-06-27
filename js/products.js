@@ -10,12 +10,12 @@ function ProductAdd(name, price, image, category, description) {
     this.image = image;
     this.category = category;
     this.description = description;
-
-
+    ProductAdd.all.push(this);
 }
 
+ProductAdd.all = [];
 
-ProductAdd.prototype.render = function () {
+ProductAdd.prototype.render = function() {
     let container = document.createElement('div');
     container.className = "product-card";
     products.appendChild(container);
@@ -23,6 +23,12 @@ ProductAdd.prototype.render = function () {
     let productBack = document.createElement('div');
     productBack.className = "product-tumb";
     container.appendChild(productBack);
+
+
+
+
+
+
 
     let productImage = document.createElement('img');
     productImage.src = this.image;
@@ -48,7 +54,7 @@ ProductAdd.prototype.render = function () {
     let description = document.createElement('p');
     details.appendChild(description);
     description.textContent = this.description;
-    
+
 
     let productInfo = document.createElement('div');
     productInfo.className = "product-bottom-details";
@@ -80,12 +86,43 @@ ProductAdd.prototype.render = function () {
 }
 
 let amber = new ProductAdd('Amber Stone', 260 + '$', './img/amber.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
-let emeraldRing = new ProductAdd('Emerald Ring', 1000 +'$', './img/Emerald-ring.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
+let emeraldRing = new ProductAdd('Emerald Ring', 1000 + '$', './img/Emerald-ring.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
+
+
+let amber2 = new ProductAdd('Amber Stone', 260 + '$', './img/amber.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
+let emeraldRing2 = new ProductAdd('Emerald Ring', 1000 + '$', './img/Emerald-ring.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
+
+
+let amber3 = new ProductAdd('Amber Stone', 260 + '$', './img/amber.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
+let emeraldRing3 = new ProductAdd('Emerald Ring', 1000 + '$', './img/Emerald-ring.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
+
+
+let amber4 = new ProductAdd('Amber Stone', 260 + '$', './img/amber.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
+let emeraldRing4 = new ProductAdd('Emerald Ring', 1000 + '$', './img/Emerald-ring.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
+
+
+let amber5 = new ProductAdd('Amber Stone', 260 + '$', './img/amber.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
+let emeraldRing5 = new ProductAdd('Emerald Ring', 1000 + '$', './img/Emerald-ring.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
+
+
+let amber6 = new ProductAdd('Amber Stone', 260 + '$', './img/amber.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
+let emeraldRing6 = new ProductAdd('Emerald Ring', 1000 + '$', './img/Emerald-ring.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
+
 
 
 
 amber.render();
 emeraldRing.render();
+amber2.render();
+emeraldRing2.render();
+amber3.render();
+emeraldRing3.render();
+amber4.render();
+emeraldRing4.render();
+amber5.render();
+emeraldRing5.render();
+amber6.render();
+emeraldRing6.render();
 
 
 function formSubmission(event) {
@@ -99,7 +136,7 @@ function formSubmission(event) {
 
 
 
-    let newProductAdd = new ProductAdd(name, price +'$', image, category, description );
+    let newProductAdd = new ProductAdd(name, price + '$', image, category, description);
     newProductAdd.render();
     swal("Ready!", "Your product added successfully ", "success");
     gemStoneForm.removeEventListener('submit', formSubmission);
