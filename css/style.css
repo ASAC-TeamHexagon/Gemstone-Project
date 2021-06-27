@@ -126,19 +126,15 @@ header {
     align-items: center;
     flex: 1;
 }
-
+.cart a {
+    text-decoration: none;
+}
 .cart a i {
     font-size: 30px;
     color: rgb(218 165 32 / 70%);
     animation: icon 1s linear;
     transition: 0.7s;
 }
-
-.cart a i:hover {
-    color: rgb(29, 29, 77);
-    font-size: 35px;
-}
-
 @keyframes icon {
     0% {
         opacity: 0;
@@ -149,6 +145,43 @@ header {
         transform: translateY(0);
     }
 }
+.cart a span {
+    color: #000;
+    text-align: right;
+    width: 20px;
+    height: 20px;
+    display: block;
+    font-size: 20px;
+    font-weight: 500;
+    border: 1px solid rgb(218 165 32 / 70%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .7s ease;
+    animation: n 2s linear;
+}
+@keyframes n {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.cart a span:hover {
+    border: 1px solid rgb(29, 29, 77);
+    width: 25px;
+    height: 25px;
+}
+
+.cart a i:hover {
+    color: rgb(29, 29, 77);
+    font-size: 35px;
+}
+
 
 .nav li::after {
     content: "";
@@ -175,6 +208,17 @@ header {
     cursor: pointer;
     color: rgb(218 165 32 / 70%);
     font-weight: 500;
+    animation: k 1.5s linear;
+}
+@keyframes k {
+    0% {
+        opacity: 0;
+        transform: translatex(300px);
+    }
+    100% {
+        opacity: 1;
+        transform: translatex(0);
+    }
 }
 
 .cart button:hover {
