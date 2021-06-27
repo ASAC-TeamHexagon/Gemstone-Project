@@ -99,11 +99,11 @@ function formSubmission(event) {
 
 
 
-    let newProductAdd = new ProductAdd(name, price, image, category, description );
+    let newProductAdd = new ProductAdd(name, price +'$', image, category, description );
     newProductAdd.render();
-    alert('Your product added successfully ')
-
-    
+    swal("Ready!", "Your product added successfully ", "success");
+    gemStoneForm.removeEventListener('submit', formSubmission);
+    gemStoneForm.reset()
 }
 
 gemStoneForm.addEventListener('submit', formSubmission);
