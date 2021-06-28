@@ -14,8 +14,7 @@ for (let i = 0; i < carts.length; i++) {
         cartNumbers(ProductAdd.all[i]);
         totalCost(ProductAdd.all[i]);
         console.log(ProductAdd.all);
-    }
-    )
+    })
 }
 
 
@@ -87,7 +86,7 @@ function displayCart() {
         productContainer.innerHTML = '';
         Object.values(cartItem).map(item => {
             productContainer.innerHTML +=
-            `
+                `
             <div class="products">
             <i class="fas fa-times-circle"></i>
             <span>${item.name}</span>
@@ -102,12 +101,12 @@ function displayCart() {
             `;
         });
     }
-    // productContainer.innerHTML += `
-    // <div class ="basketTotalContainrt">
-    // <h4 class ="basketTotalTitle> Basket Total </h4>
-    // <h4 class ="basketTotal>$${cartCost}</h4>
-    // </div>
-    // `;
+    productContainer.innerHTML += `
+     <div class ="basketTotalContainrt">
+     <h4 class ="basketTotalTitle> Basket Total </h4>
+     <h4 class ="basketTotal>$${cartCost}</h4>
+     </div>
+     `;
 }
 
 displayCart();

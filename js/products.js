@@ -9,14 +9,11 @@ function ProductAdd(name, price, image, category, description) {
     this.price = price;
     this.image = image;
     this.category = category;
-
+    this.description = description;
     this.inCart = 0;
 
     ProductAdd.all.push(this);
-
 }
-
-
 ProductAdd.all = [];
 
 ProductAdd.prototype.render = function() {
@@ -27,12 +24,6 @@ ProductAdd.prototype.render = function() {
     let productBack = document.createElement('div');
     productBack.className = "product-tumb";
     container.appendChild(productBack);
-
-
-
-
-
-
 
     let productImage = document.createElement('img');
     productImage.src = this.image;
@@ -89,16 +80,16 @@ ProductAdd.prototype.render = function() {
 
 }
 
-
 let amber = new ProductAdd('Amber Stone', 260, './img/amber.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
 let emeraldRing = new ProductAdd('Emerald Ring', 1000, './img/Emerald-ring.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
 
-let amber2 = new ProductAdd('Amber Stone', 260 , './img/amber.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
-let emeraldRing2 = new ProductAdd('Emerald Ring', 1000 , './img/Emerald-ring.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
+let amber2 = new ProductAdd('Amber Stone', 260, './img/amber.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
+let emeraldRing2 = new ProductAdd('Emerald Ring', 1000, './img/Emerald-ring.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
 
 
-let amber3 = new ProductAdd('Amber Stone', 260 , './img/amber.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
-let emeraldRing3 = new ProductAdd('Emerald Ring', 1000 , './img/Emerald-ring.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
+let amber3 = new ProductAdd('Amber Stone', 260, './img/amber.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
+let emeraldRing3 = new ProductAdd('Emerald Ring', 1000, './img/Emerald-ring.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
+
 
 
 
@@ -108,6 +99,7 @@ let emeraldRing3 = new ProductAdd('Emerald Ring', 1000 , './img/Emerald-ring.png
 
 amber.render();
 emeraldRing.render();
+
 amber2.render();
 emeraldRing2.render();
 amber3.render();
@@ -123,7 +115,6 @@ function formSubmission(event) {
     let image = event.target.productImage.value;
     let price = event.target.GemPrice.value;
     let description = event.target.GemDescription.value;
-
 
 
 
@@ -152,8 +143,7 @@ for (let i = 0; i < carts.length; i++) {
         cartNumbers(ProductAdd.all[i]);
         totalCost(ProductAdd.all[i]);
         console.log(ProductAdd.all);
-    }
-    )
+    })
 }
 
 
@@ -206,11 +196,11 @@ function totalCost(pro) {
     // console.log(ProductAdd.all.price);
     if (cartCost != null) {
         cartCost = parseInt(cartCost);
-        localStorage.setItem('totalCost', cartCost + pro.price );
+        localStorage.setItem('totalCost', cartCost + pro.price);
 
     } else {
         localStorage.setItem('totalCost', pro.price);
     }
-
+}
 
 onLoadCartNumbers();
