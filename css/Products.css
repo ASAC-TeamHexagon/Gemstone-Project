@@ -25,7 +25,7 @@ a
     flex-wrap: wrap;
 }
 .product-card {
-    width: 380px;
+    width: 270px;
     position: relative;
     box-shadow: 0 2px 7px #dfdfdf;
     margin: 50px auto;
@@ -37,7 +37,7 @@ a
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 300px;
+    height: 200px;
     padding: 50px;
     background: #f0f0f0;
 }
@@ -45,6 +45,12 @@ a
 .product-tumb img {
     max-width: 100%;
     max-height: 100%;
+}
+
+.product-tumb img:hover{
+max-width: 200%;
+max-height: 200%;
+
 }
 
 .product-details {
@@ -115,3 +121,127 @@ a
     color: #fbb72c;
     cursor: pointer;
 }
+
+
+/* for the modal */
+#myBtn, .close{
+    margin-top: 28px;
+    width: 120px;
+    height: 32px;
+    background: #DE9D3C;
+    border: none;
+    border-radius: 5px;
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: 0.1s ease;
+    cursor: pointer;
+  }
+  
+  button:hover,
+  button:focus {
+    opacity: 0.8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    transition: 0.1s ease;
+  }
+  
+  button:active {
+    opacity: 1;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+    transition: 0.1s ease;
+  }
+  
+
+/* modal open button  */
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+   
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    position: absolute;
+    box-sizing: border-box;
+    background-color: #e0e4ecee;
+   margin-left: 30%;
+   margin-top: 5%;
+    padding: 20px; 
+    border: 2px solid #DE9D3C;
+    border-radius: 10px;
+    width: 350px;
+    height:600px; /* Could be more or less, depending on screen size */
+  }
+
+  input[type="text"],#category
+ {
+  display: block;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  padding: 4px;
+  border: none;
+  border-bottom: 1px solid #DE9D3C;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  transition: 0.2s ease;
+  width: 300px;
+}
+
+#desc {
+
+    height: 200px;
+    width: 300px;
+    
+
+}
+
+
+
+  
+  
+  /* The Close Button */
+  .close {
+    font-weight: bold;
+    position: absolute;
+    top : 480px;
+    left: 400px;
+  }
+  
+  .close:hover,
+  .close:focus {
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+
+  /* labels  */
+
+  label {
+      
+      padding-bottom: 16px;
+      font-weight: bold;
+      
+  }
+
+  #openBtn{
+    
+    padding:10px;
+     
+      
+    
+
+  }

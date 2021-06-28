@@ -36,33 +36,56 @@
 
     </section>
 
-    <fieldset>
-        <legend>Add your Product</legend>
-        <form id="gemStoneForm">
-            <label for="itemName">Item Name</label>
-            <input type="text" name="itemName" id="itemName" placeholder="Gemstone">
 
-            <label for="categoryofGem">Category of your Product</label>
-            <select id="category" name="category">
-        <option disabled="disabled" selected="selected">Choose your Product Category</option>
-        <option>Gemstones</option>
-        <option>Jewelry</option>
-      </select>
+    <div id="modal">
+       
+        <div id="openBtn">
+            <button id="myBtn">add new Product</button>
+        </div>
 
-            <label for="productImage">Provide Image link for your Product</label>
-            <input type="text" name="productImage" id="productImage" placeholder="url for image (png is recommended">
+        
+        <div id="myModal" class="modal">
 
-            <label for="GemPrice">The Price</label>
-            <input type="text" name="GemPrice" id="GemPrice">
+            
+            <div class="modal-content">
+                <fieldset>
+                    <legend>Add your Product</legend>
+                    <form id="gemStoneForm">
+                        <label for="itemName">Item Name</label>
+                        <input type="text" name="itemName" id="itemName" placeholder="Gemstone" required>
 
-            <label for="GemDescription">Give A details of your Product</label>
-            <input type="text" name="GemDescription" id="GemDescription">
+                        <label for="categoryofGem">Category of your Product</label>
+                        <select id="category" name="category" required>
+                            <option disabled="disabled" selected="selected">Choose your Product Category</option>
+                            <option>Gemstones</option>
+                            <option>Jewelry</option>
+                        </select>
+
+                        <label for="productImage">Provide Image link for your Product</label>
+                        <input type="text" name="productImage" id="productImage"
+                            placeholder="url for image (png is recommended" required>
+
+                        <label for="GemPrice">The Price</label>
+                        <input type="text" name="GemPrice" id="GemPrice" required>
+
+                        <label for="GemDescription">Give A details of your Product</label>
+                        <input id="desc" type="text" name="GemDescription" id="GemDescription" required>
 
 
-            <button type="submit">Add Product</button>
-        </form>
+                        <button id="myBtn" type="submit">Add Product</button>
+                    </form>
 
-    </fieldset>
+                </fieldset>
+                <button class="close">Close</button>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
 
     <Footer>
         <div class="footer">
