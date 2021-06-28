@@ -13,6 +13,7 @@ function ProductAdd(name, price, image, category, description) {
     this.inCart = 0;
 
     ProductAdd.all.push(this);
+
 }
 ProductAdd.all = [];
 
@@ -113,19 +114,25 @@ function executeRating(stars) {
     });
 }
 
-executeRating(ratingStars);
+
+
 
 
 
 let amber = new ProductAdd('Amber Stone', 260 + "₿", './img/amber.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
 let emeraldRing = new ProductAdd('Emerald Ring', 1000 + "₿", './img/Emerald-ring.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
 
+
+
 let amber2 = new ProductAdd('Amber Stone', 210 + "₿", './img/amber.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
 let emeraldRing2 = new ProductAdd('Emerald Ring', 1100 + "₿", './img/Emerald-ring.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
 
 
+
 let amber3 = new ProductAdd('Amber Stone', 220 + "₿", './img/amber.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
 let emeraldRing3 = new ProductAdd('Emerald Ring', 1500 + "₿", './img/Emerald-ring.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
+
+
 
 
 
@@ -156,17 +163,34 @@ function formSubmission(event) {
 
 
 
+
     let newProductAdd = new ProductAdd(name, price + "₿", image, category, description);
     newProductAdd.render();
+
+
     swal("Good job!", "Your submit done!", "success");
-    // for (let i = 0; i < ProductAdd.length; i++) {
-    //     console.log(ProductAdd.all[i]);
 
-    // }
-
+    localStorage.setItem('product', JSON.stringify(ProductAdd.all));
 
 }
+
 gemStoneForm.addEventListener('submit', formSubmission);
+
+function getList() {
+    let data = JSON.parse(localStorage.getItem('product'));
+    console.log(data)
+    if (data) {
+        // data  = ProductAdd.all;
+
+        for (let i = 0; i < data.length; i++) {
+
+            let newProductAdd1 = new ProductAdd(data[i].name, data[i].price, data[i].image, data[i].category, data[i].description, data[i].inCart);
+            newProductAdd1.render();
+        }
+    }
+
+}
+getList()
 
 
 
@@ -240,7 +264,7 @@ function totalCost(pro) {
     }
 }
 
-onLoadCartNumbers();
+
 
 
 
@@ -270,3 +294,4 @@ window.onclick = function (event) {
         modal.style.display = "none";
     }
 }
+
