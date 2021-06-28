@@ -80,15 +80,15 @@ ProductAdd.prototype.render = function() {
 
 }
 
-let amber = new ProductAdd('Amber Stone', 260, './img/amber.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
-let emeraldRing = new ProductAdd('Emerald Ring', 1000, './img/Emerald-ring.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
+let amber = new ProductAdd('Amber Stone', 260 +"$", './img/amber.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
+let emeraldRing = new ProductAdd('Emerald Ring', 1000 +"$", './img/Emerald-ring.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
 
-let amber2 = new ProductAdd('Amber Stone', 260, './img/amber.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
-let emeraldRing2 = new ProductAdd('Emerald Ring', 1000, './img/Emerald-ring.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
+let amber2 = new ProductAdd('Amber Stone', 210+"$", './img/amber.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
+let emeraldRing2 = new ProductAdd('Emerald Ring', 1100 +"$", './img/Emerald-ring.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
 
 
-let amber3 = new ProductAdd('Amber Stone', 260, './img/amber.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
-let emeraldRing3 = new ProductAdd('Emerald Ring', 1000, './img/Emerald-ring.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
+let amber3 = new ProductAdd('Amber Stone', 220+"$", './img/amber.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
+let emeraldRing3 = new ProductAdd('Emerald Ring', 1500+"$", './img/Emerald-ring.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
 
 
 
@@ -119,7 +119,7 @@ function formSubmission(event) {
 
 
 
-    let newProductAdd = new ProductAdd(name, price, image, category, description);
+    let newProductAdd = new ProductAdd(name, price +"$", image, category, description);
     newProductAdd.render();
     swal("Good job!", "Your submit done!", "success");
     // for (let i = 0; i < ProductAdd.length; i++) {
@@ -204,3 +204,32 @@ function totalCost(pro) {
 }
 
 onLoadCartNumbers();
+
+
+
+
+    
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
