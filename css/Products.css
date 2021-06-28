@@ -1,16 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
-*
-{
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
 
 
 body
 {
     font-family: 'Roboto', sans-serif;
+    
+    
 }
 a
 {
@@ -28,7 +23,7 @@ a
     width: 270px;
     position: relative;
     box-shadow: 0 2px 7px #dfdfdf;
-    margin: 50px auto;
+    margin: 60px auto;
     background: #fafafa;
 }
 
@@ -245,3 +240,26 @@ max-height: 200%;
     
 
   }
+
+
+  /* for the stars */
+
+  .rating {
+    width: 180px;
+    position : absolute;
+    display: inline-block;
+    top: 525px;
+    left: 120px;
+ }
+ 
+ .rating__star {
+    cursor: pointer;
+    color: #DE9D3C;
+ }
+
+ .rating__star:hover{
+
+    color: #eeff00;
+ }
+
+ 
