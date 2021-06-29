@@ -349,7 +349,7 @@ header {
   background-attachment: fixed;
   padding: 10px;
   margin-top:5%;
-  margin-bottom:5%;
+  margin-bottom:1%;
   height: 400px;
   width:100%;
   text-align: center;
@@ -358,16 +358,19 @@ header {
   align-items: center;
   font-weight: bold;
   font-family: 'Times New Roman', Times, serif;
+  opacity: 0.5;
 }
 
 .paragraph h1{
   padding: 35px;
   font-size: 50px;
+  opacity: 1;
 
 }
 .paragraph p{
   padding : 10px;
   text-align: center;
+  opacity: 1;
 }
 
 
@@ -465,7 +468,7 @@ position: absolute;
 } */
 
 .Container .card:hover {
-  height: 300px;
+  height: 400px;
   filter: drop-shadow(1px 2px 4px rgba(0, 0, 0, 0.2));
 }
 
@@ -512,7 +515,7 @@ position: absolute;
   font-size: 16px;
   color: rgb(20 20 56);
   text-align: center;
-  line-height: 1.1;
+  line-height: 1.5;
   font-weight: 500;
 }
 
@@ -619,6 +622,7 @@ footer h2 {
   align-items: center;
   display: flex;
   justify-content: center;
+  margin-top: -80px;
 }
   
 @-webkit-keyframes scroll {
@@ -627,8 +631,8 @@ footer h2 {
             transform: translateX(0);
   }
   100% {
-    -webkit-transform: translateX(calc(-250px * 7));
-            transform: translateX(calc(-250px * 7));
+    -webkit-transform: translateX(calc(-200px * 7));
+            transform: translateX(calc(-200px * 7));
   }
 }
 
@@ -639,7 +643,7 @@ footer h2 {
   }
   100% {
     -webkit-transform: translateX(calc(-250px * 7));
-            transform: translateX(calc(-250px * 7));
+            transform: translateX(calc(-200px * 7));
   }
 }
 .sliderGem {
@@ -647,11 +651,12 @@ footer h2 {
   height: 150px;
   width: 100%;
   overflow: hidden;
-  padding: 10px;
+  padding: 5px;
+  
 }
 .sliderGem::before, .sliderGem::after {
   content: "";
-  height: 150px;
+  height: 100px;
   position: absolute;
   width: 200px;
   z-index: 2;
@@ -671,11 +676,11 @@ footer h2 {
   -webkit-animation: scroll 40s linear infinite;
           animation: scroll 40s linear infinite;
   display: flex;
-  width: calc(250px * 14);
+  width: calc(200px * 14);
 }
 .sliderGem .slideGem {
-  height: 150px;
-  width: 250px;
+  height: 100px;
+  width: 200px;
 }
   
 
