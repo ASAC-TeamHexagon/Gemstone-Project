@@ -379,10 +379,45 @@ header {
 #collection {
   padding-top: 40px;
   font-size: 45px;
-  color: #5b5d69;
+  color: #293160;
   font-weight: bold;
 font-family: 'Times New Roman', Times, serif;
+position: relative;
 
+}
+.para {
+  position: relative;
+ text-align: center;
+}
+.para h2::after {
+content: "";
+left: 34%;
+background-color: darkgoldenrod;
+width: 0;
+height: 1px;
+margin: auto;
+transition: .7s linear;
+display: block;
+position: absolute;
+}
+.para h2::before {
+  content: "";
+  right: 34%;
+  background-color: darkgoldenrod;
+  position: absolute;
+  width: 0;
+  height: 1px;
+  margin: auto;
+  transition: .7s ease-in;
+  display: block;
+  }
+.para h2:hover::after{
+  width: 32%;
+  height: 2px;
+}
+.para h2:hover::before{
+  width: 32%;
+  height: 2px;
 }
 /* cards style  */
 
