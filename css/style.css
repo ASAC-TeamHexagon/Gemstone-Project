@@ -344,30 +344,42 @@ header {
 
 /* for the paragraph */
 
-.paragraph{
+.paragraph {
   background-image: url(../img/paragraphBackground.png);
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   padding: 10px;
   margin-top:5%;
   margin-bottom:5%;
+
+  height: 200px;
+  width:98.7%;
+  text-align: center;
+
   height: 400px;
   width:100%;
   text-align: center;
   font-size: 25px;
   color: #86560f;
+
   align-items: center;
-  font-weight: bold;
   font-family: 'Times New Roman', Times, serif;
+
+
 }
 
 .paragraph h1{
   padding: 35px;
-  font-size: 50px;
-
+  font-size: 26px;
+  font-weight: 600;
+  color: rgb(218 165 32 / 98%);
 }
 .paragraph p{
   padding : 10px;
   text-align: center;
+  font-size: 19px;
+  line-height: 1.8;
+  color: rgb(3, 32, 32);
+  font-weight: 500;
 }
 
 
@@ -441,7 +453,7 @@ position: absolute;
 .Container .card {
   position: relative;
   width: 300px;
-  height: 150px;
+  height: 140px;
   background-color: whitesmoke;
   margin: 30px 30px;
   padding: 20px 15px;
@@ -465,7 +477,7 @@ position: absolute;
 } */
 
 .Container .card:hover {
-  height: 300px;
+  height: 320px;
   filter: drop-shadow(1px 2px 4px rgba(0, 0, 0, 0.2));
 }
 
@@ -512,13 +524,13 @@ position: absolute;
   font-size: 16px;
   color: rgb(20 20 56);
   text-align: center;
-  line-height: 1.1;
+  line-height: 1.2;
   font-weight: 500;
 }
 
 .content button {
   font-size: 18px;
-  width: 50%;
+  width: 60%;
   margin-top: 20px;
   border-radius: 15px;
   transition: 700ms;
