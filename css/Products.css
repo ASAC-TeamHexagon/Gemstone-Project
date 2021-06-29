@@ -126,71 +126,114 @@ a {
 }
 
 /* for the modal */
-#openBtn {
-  margin-top: 28px;
-  width: 1200px;
-  margin: auto;
-  font-family: "Roboto", sans-serif;
-  transition: 0.1s ease;
-  cursor: pointer;
-  text-align: center;
+
+#btnOpen{
+    margin-top: 28px;
+    width: 400px;
+    height: 32px;
+    background: #DE9D3C;
+    border: none;
+    border-radius: 5px;
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: 0.1s ease;
+    cursor: pointer;
 }
-#openBtn button {
-    width: 18%;
-    background: #de9d3c;
+
+#addBtn{
+    margin-top: 28px;
+    width: 150px;
     height: 32px;
     border: none;
     text-transform: uppercase;
-    font-weight: 500;
-    color: #fff;
-    border-radius: 15px;
+    transition: 0.1s ease;
+    cursor: pointer;
+
 }
+
+.close{
+    margin-top: 28px;
+    width: 32px;
+    height: 32px;
+    background: #690502;
+    border: none;
+    border-radius: 5px;
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: 0.1s ease;
+    cursor: pointer;
+    padding-left: 10px;
+  }
 
 button:hover,
 button:focus {
-  opacity: 0.8;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-  transition: 0.1s ease;
+    opacity: 0.8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    transition: 0.1s ease;
+  }
+  
+button:active {
+    opacity: 1;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+    transition: 0.1s ease;
+  }
+  
+
+/* modal open button  */
+#openBtn{
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    margin-left: 400px;
+    padding:10px;
+
+
 }
 
-button:active {
-  opacity: 1;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-  transition: 0.1s ease;
+.btns{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 /* modal open button  */
 
 /* The Modal (background) */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
-}
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+   
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    position: absolute;
+    box-sizing: border-box;
+    background-color: #e0e4ecee;
+   margin-left: 30%;
+   margin-top: 2%;
+   margin-bottom: 5%;
+    padding: 20px; 
+    border: 2px solid #DE9D3C;
+    border-radius: 10px;
+    width: 350px;
+    height:600px; 
+  }
 
-/* Modal Content/Box */
-.modal-content {
-  position: absolute;
-  box-sizing: border-box;
-  background-color: #e0e4ecee;
-  margin-left: 30%;
-  margin-top: 5%;
-  padding: 20px;
-  border: 2px solid #de9d3c;
-  border-radius: 10px;
-  width: 350px;
-  height: 600px; /* Could be more or less, depending on screen size */
-}
-
-input[type="text"],
-#category {
+  input[type="text"],#category
+ {
   display: block;
   box-sizing: border-box;
   margin-bottom: 20px;
@@ -218,14 +261,13 @@ input[type="text"],
   left: 400px;
 }
 
-.close:hover,
-.close:focus {
-  text-decoration: none;
-  cursor: pointer;
-}
+ 
+ 
+
 
 
   /* labels  */
+
 
 
 label {
@@ -233,18 +275,7 @@ label {
   font-weight: bold;
 }
 
-#openBtn {
-  padding: 10px;
-}
-
-
-/* for the stars */
-
-  .rating {
-    /* width: 180px; */
-    display: inline-block;
-    
- }
+  
  
  .rating__star {
     cursor: pointer;
