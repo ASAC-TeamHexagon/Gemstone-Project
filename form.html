@@ -25,61 +25,42 @@
         </nav>
         <div class="cart">
             <a href=""><i class="fas fa-shopping-cart"></i></a>
-            <span><div class="name"></div></span>
+            <span id="spanName">
+                <div id="nameText"></div>
+            </span>
         </div>
     </header>
 
-    <main class="topForm">
-            
-            <form id="form">
-                <div class="header">
-                    <h2>Name</h2>
-                </div>
+    <main>
+        <center>
+            <div class="topForm">
+                <form id="form">
+                    <h2 style=" color:#DE9D3C">Please fill your information</h2>
 
-                <div class="name"></div>
-                <input type="text" name="first_name" placeholder="first name" required>
-                <input type="text" name="last_name" placeholder="last name" required>
-                </div>
 
-                <div class="header">
-                    <h2>Email</h2>
-                </div>
+                    <div class="firstName">
+                        <input type="text" name="first_name" placeholder="first name" required>
+                        <input type="text" name="last_name" placeholder="last name" required>
+                    </div>
+                    <div class="email">
+                        <input type="text" name="Email" placeholder="your e-mail : e.g @gmail.com" required>
+                    </div>
 
-                <div class="name1"></div>
-                    <input type="text" name="Email" placeholder="e.g @gmail.com" required>
-                </div>
+                    <div class="name2">
+                        <input type="password" name="password" placeholder="Password" required>
+                        <input type="password" name="password2" placeholder="Repeat Password" required>
 
-                <div class="header">
-                    <h2>password </h2>
-                </div>
-                <div class="name2"></div>
-                    <input type="text" name="password" placeholder="123-45-678" required>
-                </div>
-
-                <div class="header">
-                    <h2>Phone</h2>
-                </div>
-
-                <div class="name3"></div>
-                    <input type="text" name="phone" placeholder="123-45-678" required>
-                </div>
-
-                <div class="header">
-                    <h2>Product</h2>
-                </div>
-                    <select class="option" name="subject">
-                        <option disabled="disabled" selected="selected">--Choose option</option>
-                        <option>Precious Metalas</option>
-                        <option>Jewelry</option>
-                        <option>Gemstones</option>
-                    </select>
-                </div>
-
-                <div class="bnt">
-                    <button id="button" type="submit">Register</button>
-                </div>
+                    </div>
+                    <div class="name3">
+                        <input type="text" name="phone" placeholder="+962 79 00000" required>
+                    </div>
+                    <div class="bnt">
+                        <button id="button" type="submit">Register</button>
+                    </div>
+            </div>
             </form>
-
+            </div>
+        </center>
     </main>
 
 
@@ -116,8 +97,8 @@
 
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="js/form.js"></script>
-  
-  
+
+
 </body>
 
 </html>
