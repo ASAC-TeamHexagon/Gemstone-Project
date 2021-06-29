@@ -118,20 +118,28 @@ function executeRating(stars) {
 }
 
 
-let amber = new ProductAdd('Hoop Earrings', 260, 'img2/Hoop Earrings.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
-let emeraldRing = new ProductAdd('Womens Sunshine Floral ', 1000, 'img2/Womens Sunshine Floral.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
-let emeraldRing2 = new ProductAdd('Citrine Birthstone Gem ', 8000, 'img2/Citrine Birthstone Gem.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
-let amber2 = new ProductAdd('Sterling Silver', 8000, 'img2/Sterling Silver.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
-let amber3 = new ProductAdd('Ruby Gemstone', 210, 'img2/Ruby Gemstone.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
-let emeraldRing3 = new ProductAdd('Amethyst Gemstone', 6000, 'img2/Amethyst Gemstone.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
 
+
+
+
+let amber = new ProductAdd('Amber Stone', 260 , './img/amber.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
+let emeraldRing = new ProductAdd('Emerald Ring', 1000 , './img/Emerald-ring.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
+
+
+
+let amber2 = new ProductAdd('Amber Stone', 210 , './img/amber.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
+let emeraldRing2 = new ProductAdd('Emerald Ring', 1100 , './img/Emerald-ring.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
+
+
+
+let amber3 = new ProductAdd('Amber Stone', 220 , './img/amber.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
+let emeraldRing3 = new ProductAdd('Emerald Ring', 1500 , './img/Emerald-ring.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
 
 amber.render();
 emeraldRing.render();
 
-emeraldRing2.render();
 amber2.render();
-
+emeraldRing2.render();
 amber3.render();
 emeraldRing3.render();
 
@@ -151,8 +159,6 @@ function formSubmission(event) {
     swal("Good job!", "Your submit done!", "success");
 
     localStorage.setItem('product', JSON.stringify(ProductAdd.all));
-    
-
 
 }
 
@@ -162,15 +168,13 @@ function getList() {
     let data = JSON.parse(localStorage.getItem('product'));
     console.log(data)
     if (data) {
-        ProductAdd =[];
         for (let i = 0; i < data.length; i++) {
 
             let newProductAdd1 = new ProductAdd(data[i].name, data[i].price, data[i].image, data[i].category, data[i].description, data[i].inCart);
             newProductAdd1.render();
-            
         }
     }
-    
+
 }
 
 getList()
@@ -253,7 +257,7 @@ onLoadCartNumbers()
 var modal = document.getElementById("myModal");
 
 // Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+var btn = document.getElementById("btnOpen");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
