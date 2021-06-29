@@ -27,12 +27,14 @@ a {
 }
 
 .product-tumb {
+
   display: flex;
   align-items: center;
   justify-content: center;
   height: 200px;
   padding: 50px;
   background: #f0f0f0;
+
 }
 
 .product-tumb img {
@@ -46,7 +48,9 @@ a {
 }
 
 .product-details {
+
   padding: 30px;
+
 }
 
 .product-category {
@@ -74,6 +78,7 @@ a {
 }
 
 .product-details p {
+
   font-size: 15px;
   line-height: 22px;
   margin-bottom: 18px;
@@ -84,7 +89,13 @@ a {
   overflow: hidden;
   border-top: 1px solid #eee;
   padding-top: 20px;
+    font-size: 15px;
+    line-height: 18px;
+    margin-bottom: 10px;
+    color: #999;
 }
+
+
 
 .product-bottom-details div {
   float: left;
@@ -198,6 +209,7 @@ input[type="text"],
   width: 300px;
 }
 
+
 /* The Close Button */
 .close {
   font-weight: bold;
@@ -212,7 +224,9 @@ input[type="text"],
   cursor: pointer;
 }
 
-/* labels  */
+
+  /* labels  */
+
 
 label {
   padding-bottom: 16px;
@@ -223,20 +237,22 @@ label {
   padding: 10px;
 }
 
+
 /* for the stars */
 
-.rating {
-  width: 180px;
-  position: absolute;
-  display: inline-block;
-  top: 525px;
-  left: 120px;
-}
+  .rating {
+    /* width: 180px; */
+    display: inline-block;
+    
+ }
+ 
+ .rating__star {
+    cursor: pointer;
+    color: #DE9D3C;
+ }
 
-.rating__star {
-  cursor: pointer;
-  color: #de9d3c;
-}
+
+
 
 .rating__star:hover {
   color: #eeff00;
