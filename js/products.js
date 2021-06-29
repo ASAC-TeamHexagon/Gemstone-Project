@@ -6,7 +6,7 @@ let products = document.getElementById('products');
 
 function ProductAdd(name, price, image, category, description) {
     this.name = name;
-    this.price = price + '  ₿';
+    this.price = price;
     this.image = image;
     this.category = category;
     this.description = description;

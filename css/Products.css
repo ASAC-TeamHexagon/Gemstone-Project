@@ -132,9 +132,9 @@ a {
 /* for the modal */
 
 #btnOpen{
-    margin-top: 28px;
-    width: 400px;
-    height: 32px;
+    margin-top: 50px;
+    width: 300px;
+    height: 40px;
     background: #DE9D3C;
     border: none;
     border-radius: 5px;
@@ -197,7 +197,7 @@ button:active {
     align-items: center;
     position: relative;
     justify-content: center;
-    margin-left: 400px;
+    margin-left: 600px;
     padding:10px;
 
 
