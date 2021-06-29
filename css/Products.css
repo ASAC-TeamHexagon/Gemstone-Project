@@ -1,122 +1,129 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700");
 
-
-body
-{
-    font-family: 'Roboto', sans-serif;
-    
-    
+body {
+  font-family: "Roboto", sans-serif;
 }
-a
-{
-    text-decoration: none;
+main {
+    width: 1200px;
+    margin: auto;
 }
-#products{
-    position: relative;
-    display: flex;
-    flex: auto;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+a {
+  text-decoration: none;
+}
+#products {
+  position: relative;
+  display: flex;
+  flex: auto;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .product-card {
-    width: 270px;
-    position: relative;
-    box-shadow: 0 2px 7px #dfdfdf;
-    margin: 60px auto;
-    background: #fafafa;
+  width: 270px;
+  position: relative;
+  box-shadow: 0 2px 7px #dfdfdf;
+  margin: 60px auto;
+  background: #fafafa;
 }
 
-
 .product-tumb {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 150px;
-    padding: 50px;
-    background: #f0f0f0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  padding: 50px;
+  background: #f0f0f0;
+
 }
 
 .product-tumb img {
-    max-width: 100%;
-    max-height: 100%;
+  max-width: 100%;
+  max-height: 100%;
 }
 
-.product-tumb img:hover{
-max-width: 200%;
-max-height: 200%;
-
+.product-tumb img:hover {
+  max-width: 200%;
+  max-height: 200%;
 }
 
 .product-details {
-    padding: 25px;
+
+  padding: 30px;
+
 }
 
 .product-category {
-    display: block;
-    font-size: 12px;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: #ccc;
-    margin-bottom: 18px;
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ccc;
+  margin-bottom: 18px;
 }
 
 .product-details h4 a {
-    font-weight: 500;
-    display: block;
-    margin-bottom: 18px;
-    text-transform: uppercase;
-    color: #363636;
-    text-decoration: none;
-    transition: 0.3s;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+  color: #363636;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
 .product-details h4 a:hover {
-    color: #fbb72c;
-    cursor: pointer;
+  color: #fbb72c;
+  cursor: pointer;
 }
 
 .product-details p {
+
+  font-size: 15px;
+  line-height: 22px;
+  margin-bottom: 18px;
+  color: #999;
+}
+
+.product-bottom-details {
+  overflow: hidden;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
     font-size: 15px;
     line-height: 18px;
     margin-bottom: 10px;
     color: #999;
 }
 
-.product-bottom-details {
-    overflow: hidden;
-    border-top: 1px solid #eee;
-    padding-top: 15px;
-}
+
 
 .product-bottom-details div {
-    float: left;
-    width: 50%;
+  float: left;
+  width: 50%;
 }
 
 .product-price {
-    font-size: 18px;
-    color: #fbb72c;
-    font-weight: 600;
+  font-size: 18px;
+  color: #fbb72c;
+  font-weight: 600;
 }
 
 .product-links {
-    text-align: right;
+  text-align: right;
 }
 
 .product-links a {
-    display: inline-block;
-    margin-left: 5px;
-    color: #e1e1e1;
-    transition: 0.3s;
-    font-size: 17px;
+  display: inline-block;
+  margin-left: 5px;
+  color: #e1e1e1;
+  transition: 0.3s;
+  font-size: 17px;
 }
 
 .product-links a:hover {
-    color: #fbb72c;
-    cursor: pointer;
+  color: #fbb72c;
+  cursor: pointer;
 }
-
 
 /* for the modal */
 
@@ -139,12 +146,7 @@ max-height: 200%;
     margin-top: 28px;
     width: 150px;
     height: 32px;
-    background: #DE9D3C;
     border: none;
-    border-radius: 5px;
-    color: #FFF;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
     text-transform: uppercase;
     transition: 0.1s ease;
     cursor: pointer;
@@ -198,6 +200,7 @@ button:active {
     justify-content: center;
 }
 
+/* modal open button  */
 
 /* The Modal (background) */
 .modal {
@@ -236,8 +239,8 @@ button:active {
   margin-bottom: 20px;
   padding: 4px;
   border: none;
-  border-bottom: 1px solid #DE9D3C;
-  font-family: 'Roboto', sans-serif;
+  border-bottom: 1px solid #de9d3c;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 15px;
   transition: 0.2s ease;
@@ -245,11 +248,17 @@ button:active {
 }
 
 #desc {
+  height: 200px;
+  width: 300px;
+}
 
-    height: 200px;
-    width: 300px;
-    
 
+/* The Close Button */
+.close {
+  font-weight: bold;
+  position: absolute;
+  top: 480px;
+  left: 400px;
 }
 
  
@@ -259,32 +268,23 @@ button:active {
 
   /* labels  */
 
-  label {
-      
-      padding-bottom: 16px;
-      font-weight: bold;
-      
-  }
+
+
+label {
+  padding-bottom: 16px;
+  font-weight: bold;
+}
 
   
-
-
-  /* for the stars */
-
-  .rating {
-    /* width: 180px; */
-    display: inline-block;
-    
- }
  
  .rating__star {
     cursor: pointer;
     color: #DE9D3C;
  }
 
- .rating__star:hover{
 
-    color: #eeff00;
- }
 
- 
+
+.rating__star:hover {
+  color: #eeff00;
+}

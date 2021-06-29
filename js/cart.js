@@ -76,7 +76,6 @@ function totalCost(pro) {
 
 onLoadCartNumbers();
 
-
 function displayCart() {
     let cartItem = localStorage.getItem('productsInCart');
     cartItem = JSON.parse(cartItem);
@@ -88,7 +87,7 @@ function displayCart() {
             productContainer.innerHTML +=
                 `
             <div class="products">
-            <i class="fas fa-times-circle"></i>
+            <i class="fas fa-times-circle"></i> 
             <span>${item.name}</span>
             <img src="${item.image}">
             </div>
@@ -109,5 +108,6 @@ function displayCart() {
      
      `;
 }
-
 displayCart();
+
+
