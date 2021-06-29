@@ -44,7 +44,7 @@ ProductAdd.prototype.render = function () {
 
     let link = document.createElement('a');
     link.textContent = this.name;
-    link.href = this.name;
+    link.href = "itemDetail.html";
     header4.appendChild(link);
 
     let description = document.createElement('p');
@@ -79,11 +79,15 @@ ProductAdd.prototype.render = function () {
     cartIcon.className = "fas fa-shopping-bag"
     cart.appendChild(cartIcon);
 
-    let rate = document.createElement('div')
+    let space =document.createElement('br')
+    productLinks.appendChild(space);
+
+    let rate = document.createElement('span')
     rate.className = "rating"
     productLinks.appendChild(rate);
 
     for (let i = 0; i < Math.floor(Math.random() * 5) + 1; i++) {
+       
         let stars = document.createElement('i');
         stars.className = "rating__star fas fa-star";
         rate.appendChild(stars);
@@ -118,20 +122,18 @@ function executeRating(stars) {
 
 
 
-let amber = new ProductAdd('Amber Stone', 260 , './img/amber.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
-let emeraldRing = new ProductAdd('Emerald Ring', 1000 , './img/Emerald-ring.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
+let amber = new ProductAdd('Amber Stone', 260 + "₿", './img/amber.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
+let emeraldRing = new ProductAdd('Emerald Ring', 1000 + "₿", './img/Emerald-ring.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
 
 
 
-let amber2 = new ProductAdd('Amber Stone', 210 , './img/amber.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
-let emeraldRing2 = new ProductAdd('Emerald Ring', 1100 , './img/Emerald-ring.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
+let amber2 = new ProductAdd('Amber Stone', 210 + "₿", './img/amber.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
+let emeraldRing2 = new ProductAdd('Emerald Ring', 1100 + "₿", './img/Emerald-ring.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
 
 
 
-let amber3 = new ProductAdd('Amber Stone', 220 , './img/amber.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
-let emeraldRing3 = new ProductAdd('Emerald Ring', 1500 , './img/Emerald-ring.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
-
-
+let amber3 = new ProductAdd('Amber Stone', 220 + "₿", './img/amber.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
+let emeraldRing3 = new ProductAdd('Emerald Ring', 1500 + "₿", './img/Emerald-ring.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
 
 amber.render();
 emeraldRing.render();
@@ -151,10 +153,8 @@ function formSubmission(event) {
     let price = event.target.GemPrice.value;
     let description = event.target.GemDescription.value;
 
-
     let newProductAdd = new ProductAdd(name, price + "₿", image, category, description);
     newProductAdd.render();
-
 
     swal("Good job!", "Your submit done!", "success");
 
@@ -179,9 +179,7 @@ function getList() {
 
 getList()
 
-
 let carts = document.querySelectorAll('.fa-shopping-bag');
-
 
 for (let i = 0; i < carts.length; i++) {
     carts[i].addEventListener('click', () => {
