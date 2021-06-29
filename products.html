@@ -38,17 +38,19 @@
     </main>
     
 
+    <div id="openBtn">
+        <button id="btnOpen">add new Product</button>
+    </div>
+
 
     <div id="modal">
-       
-        <div id="openBtn">
-            <button id="myBtn">add new Product</button>
-        </div>
 
-        
+
+
+
         <div id="myModal" class="modal">
 
-            
+
             <div class="modal-content">
                 <fieldset>
                     <legend>Add your Product</legend>
@@ -74,11 +76,15 @@
                         <input id="desc" type="text" name="GemDescription" id="GemDescription" required>
 
 
-                        <button id="myBtn" type="submit">Add Product</button>
+
+                        <div class="btns">
+                            <button id="addBtn" type="submit">Add Product</button>
+                            <button class="close">X</button>
+                        </div>
                     </form>
 
                 </fieldset>
-                <button class="close">Close</button>
+
 
             </div>
 
@@ -86,6 +92,8 @@
 
 
     </div>
+
+    
 
 
 
