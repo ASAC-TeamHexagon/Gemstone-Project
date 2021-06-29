@@ -534,6 +534,7 @@ position: absolute;
   margin-top: 20px;
   border-radius: 15px;
   transition: 700ms;
+  border: none;
 }
 
 .content button:hover {

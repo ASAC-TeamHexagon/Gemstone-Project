@@ -162,11 +162,12 @@ function getList() {
     let data = JSON.parse(localStorage.getItem('product'));
     console.log(data)
     if (data) {
+        ProductAdd.all =[];
         for (let i = 0; i < data.length; i++) {
 
             let newProductAdd1 = new ProductAdd(data[i].name, data[i].price, data[i].image, data[i].category, data[i].description, data[i].inCart);
             newProductAdd1.render();
-            products.removeEventListener('submit', formSubmission);
+            
         }
     }
     
