@@ -6,7 +6,7 @@ let products = document.getElementById('products');
 
 function ProductAdd(name, price, image, category, description) {
     this.name = name;
-    this.price = price;
+    this.price = price ;
     this.image = image;
     this.category = category;
     this.description = description;
@@ -162,11 +162,14 @@ gemStoneForm.addEventListener('submit', formSubmission);
 function getList() {
     let data = JSON.parse(localStorage.getItem('product'));
     console.log(data)
+    ProductAdd.all = [];
     if (data) {
+        
         for (let i = 0; i < data.length; i++) {
 
             let newProductAdd1 = new ProductAdd(data[i].name, data[i].price, data[i].image, data[i].category, data[i].description, data[i].inCart);
             newProductAdd1.render();
+            
         }
     }
 
