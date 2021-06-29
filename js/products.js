@@ -4,9 +4,9 @@ let products = document.getElementById('products');
 
 
 
-function ProductAdd(name, price, image, category, description) {
+function ProductAdd(name, price, image, category, description,inCart) {
     this.name = name;
-    this.price = price ;
+    this.price = price;
     this.image = image;
     this.category = category;
     this.description = description;
@@ -17,7 +17,7 @@ function ProductAdd(name, price, image, category, description) {
 }
 ProductAdd.all = [];
 
-ProductAdd.prototype.render = function() {
+ProductAdd.prototype.render = function () {
     let container = document.createElement('div');
     container.className = "product-card";
     products.appendChild(container);
@@ -124,7 +124,7 @@ function executeRating(stars) {
 
 let amber = new ProductAdd('Hoop Earrings', 1, 'img2/Hoop Earrings.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
 let emeraldRing = new ProductAdd('Sunshine Floral ', 2, 'img2/Womens Sunshine Floral.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
-let emeraldRing2 = new ProductAdd('Amber Stone ', 0.5, 'img/amber.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
+let emeraldRing2 = new ProductAdd('Amber Stone ', 5.5, 'img/amber.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
 let amber2 = new ProductAdd('Citrine Birthstone Gem', 2, 'img2/Citrine Birthstone Gem.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
 let amber3 = new ProductAdd('Ruby Gemstone', 1.5, 'img2/Ruby Gemstone.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
 let emeraldRing3 = new ProductAdd('Amethyst Gemstone', 3, 'img2/Amethyst Gemstone.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
@@ -148,7 +148,7 @@ function formSubmission(event) {
     let price = event.target.GemPrice.value;
     let description = event.target.GemDescription.value;
 
-    let newProductAdd = new ProductAdd(name, price, image, category, description);
+    let newProductAdd = new ProductAdd(name, price, image, category, description, 0);
     newProductAdd.render();
 
     swal("Good job!", "Your submit done!", "success");
@@ -162,14 +162,14 @@ gemStoneForm.addEventListener('submit', formSubmission);
 function getList() {
     let data = JSON.parse(localStorage.getItem('product'));
     console.log(data)
-    ProductAdd.all = [];
+    
     if (data) {
-        
+
         for (let i = 0; i < data.length; i++) {
 
             let newProductAdd1 = new ProductAdd(data[i].name, data[i].price, data[i].image, data[i].category, data[i].description, data[i].inCart);
             newProductAdd1.render();
-            
+
         }
     }
 
@@ -177,102 +177,102 @@ function getList() {
 
 getList()
 
-let carts = document.querySelectorAll('.fa-shopping-bag');
+    let carts = document.querySelectorAll('.fa-shopping-bag');
 
-for (let i = 0; i < carts.length; i++) {
-    carts[i].addEventListener('click', () => {
-        // console.log(ProductAdd.all.name);
+    for (let i = 0; i < carts.length; i++) {
+        carts[i].addEventListener('click', () => {
+            // console.log(ProductAdd.all.name);
 
-        cartNumbers(ProductAdd.all[i]);
-        totalCost(ProductAdd.all[i]);
-        console.log(ProductAdd.all);
-    })
-}
-
-
-function onLoadCartNumbers() {
-    let productNumbers = localStorage.getItem('cartNumbers');
-    if (productNumbers) {
-        document.querySelector('.cart span').textContent = productNumbers;
+            cartNumbers(ProductAdd.all[i]);
+            totalCost(ProductAdd.all[i]);
+            console.log(ProductAdd.all[i]);
+        })
     }
-}
 
 
-function cartNumbers(pro) {
-    let productNumbers = localStorage.getItem('cartNumbers');
-    productNumbers = parseInt(productNumbers);
-    if (productNumbers) {
-        localStorage.setItem('cartNumbers', productNumbers + 1);
-        document.querySelector('.cart span').textContent = productNumbers + 1;
-    } else {
-        localStorage.setItem('cartNumbers', 1);
-        document.querySelector('.cart span').textContent = 1;
+    function onLoadCartNumbers() {
+        let productNumbers = localStorage.getItem('cartNumbers');
+        if (productNumbers) {
+            document.querySelector('.cart span').textContent = productNumbers;
+        }
     }
-    setItem(pro);
-}
 
 
-function setItem(pro) {
-    let cartItem = localStorage.getItem('productsInCart');
-    cartItem = JSON.parse(cartItem);
-    if (cartItem != null) {
-        if (cartItem[pro.name] == undefined) {
+    function cartNumbers(pro) {
+        let productNumbers = localStorage.getItem('cartNumbers');
+        productNumbers = parseInt(productNumbers);
+        if (productNumbers) {
+            localStorage.setItem('cartNumbers', productNumbers + 1);
+            document.querySelector('.cart span').textContent = productNumbers + 1;
+        } else {
+            localStorage.setItem('cartNumbers', 1);
+            document.querySelector('.cart span').textContent = 1;
+        }
+        setItem(pro);
+    }
+
+
+    function setItem(pro) {
+        let cartItem = localStorage.getItem('productsInCart');
+        cartItem = JSON.parse(cartItem);
+        if (cartItem != null) {
+            if (cartItem[pro.name] == undefined) {
+                cartItem = {
+                    ...cartItem,
+                    [pro.name]: pro
+                }
+            }
+            cartItem[pro.name].inCart += 1;
+        } else {
+            pro.inCart = 1;
             cartItem = {
-                ...cartItem,
                 [pro.name]: pro
             }
         }
-        cartItem[pro.name].inCart += 1;
-    } else {
-        pro.inCart = 1;
-        cartItem = {
-            [pro.name]: pro
+
+        localStorage.setItem('productsInCart', JSON.stringify(cartItem));
+    }
+
+
+    function totalCost(pro) {
+        let cartCost = localStorage.getItem('totalCost');
+        // console.log(ProductAdd.all.price);
+        if (cartCost != null) {
+            cartCost = parseInt(cartCost);
+            localStorage.setItem('totalCost', cartCost + pro.price);
+
+        } else {
+            localStorage.setItem('totalCost', pro.price);
         }
     }
-
-    localStorage.setItem('productsInCart', JSON.stringify(cartItem));
-}
+    onLoadCartNumbers()
 
 
-function totalCost(pro) {
-    let cartCost = localStorage.getItem('totalCost');
-    // console.log(ProductAdd.all.price);
-    if (cartCost != null) {
-        cartCost = parseInt(cartCost);
-        localStorage.setItem('totalCost', cartCost + pro.price);
 
-    } else {
-        localStorage.setItem('totalCost', pro.price);
+
+
+
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("btnOpen");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on the button, open the modal
+    btn.onclick = function () {
+        modal.style.display = "block";
     }
-}
-onLoadCartNumbers()
 
-
-
-
-
-
-var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("btnOpen");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
-    modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
         modal.style.display = "none";
     }
-}
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
