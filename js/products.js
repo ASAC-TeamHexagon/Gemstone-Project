@@ -115,22 +115,12 @@ function executeRating(stars) {
 
 
 
-
-
-
-let amber = new ProductAdd('Amber Stone', 260 , './img/amber.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
-let emeraldRing = new ProductAdd('Emerald Ring', 1000 , './img/Emerald-ring.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
-
-
-
-let amber2 = new ProductAdd('Amber Stone', 210 , './img/amber.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
-let emeraldRing2 = new ProductAdd('Emerald Ring', 1100 , './img/Emerald-ring.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
-
-
-
-let amber3 = new ProductAdd('Amber Stone', 220 , './img/amber.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
-let emeraldRing3 = new ProductAdd('Emerald Ring', 1500 , './img/Emerald-ring.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
-
+let amber = new ProductAdd('Hoop Earrings', 260, 'img2/4-removebg-preview.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
+let emeraldRing = new ProductAdd('Womens Sunshine Floral ', 1000, 'img2/2-removebg-preview.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
+let emeraldRing2 = new ProductAdd('Sterling Silver ', 8000, 'img2/3-removebg-preview.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
+let amber2 = new ProductAdd('Citrine Birthstone Gem', 8000, 'img2/png_purple-removebg-preview.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
+let amber3 = new ProductAdd('Ruby Gemstone', 210, 'img2/ruby-removebg-preview.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
+let emeraldRing3 = new ProductAdd('Amethyst Gemstone', 6000, 'img2/png_orange_gemstone-removebg-preview.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
 
 
 amber.render();
@@ -151,7 +141,6 @@ function formSubmission(event) {
     let price = event.target.GemPrice.value;
     let description = event.target.GemDescription.value;
 
-
     let newProductAdd = new ProductAdd(name, price + "₿", image, category, description);
     newProductAdd.render();
 
@@ -159,6 +148,8 @@ function formSubmission(event) {
     swal("Good job!", "Your submit done!", "success");
 
     localStorage.setItem('product', JSON.stringify(ProductAdd.all));
+    
+
 
 }
 
@@ -172,9 +163,10 @@ function getList() {
 
             let newProductAdd1 = new ProductAdd(data[i].name, data[i].price, data[i].image, data[i].category, data[i].description, data[i].inCart);
             newProductAdd1.render();
+            products.removeEventListener('submit', formSubmission);
         }
     }
-
+    
 }
 
 getList()
