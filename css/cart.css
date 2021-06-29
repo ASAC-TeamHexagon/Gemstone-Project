@@ -1,11 +1,13 @@
 
-body {
+
+main {
     width: 1200px;
     margin: auto;
 }
 .p-contanier {
     width: 900px;
     margin: auto;
+
 }
 .p-contanier i {
     cursor: pointer;
