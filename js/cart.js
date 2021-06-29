@@ -93,7 +93,7 @@ function displayCart() {
             <img src="${item.image}">
             </div>
             
-            <div class="price">${item.price}</div>
+            <div class="price">$${item.price}</div>
             
             <div class="quantity"><i class="fas fa-chevron-circle-left"></i>${item.inCart}<i class="fas fa-chevron-circle-right"></i></div>
 
@@ -103,9 +103,10 @@ function displayCart() {
     }
     productContainer.innerHTML += `
      <div class ="basketTotalContainrt">
-     <h4 class ="basketTotalTitle> Basket Total </h4>
-     <h4 class ="basketTotal>$${cartCost}</h4>
+      Basket Total<div> $${cartCost}</div>
+     
      </div>
+     
      `;
 }
 

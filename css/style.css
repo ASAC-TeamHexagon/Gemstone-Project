@@ -197,12 +197,13 @@ header {
   width: 150px;
   height: 50px;
   font-size: 18px;
-  border-radius: 15px;
-  background-color: #fff;
+  border-radius: 20px;
+  background-color: rgb(218 165 32 / 70%);
   border: 2px solid rgb(218 165 32 / 70%);
+  border-top-right-radius: 0px;
   transition: 0.5s ease;
   cursor: pointer;
-  color: rgb(218 165 32 / 70%);
+  color: #fff;
   font-weight: 500;
   animation: k 1.5s linear;
 }
@@ -218,10 +219,11 @@ header {
 }
 
 .cart button:hover {
-  width: 200px;
-  height: 55px;
-  border: 2px solid rgb(29, 29, 77);
-  color: rgb(29, 29, 77);
+  width: 160px;
+  height: 52px;
+  /* border: 2px solid rgb(29, 29, 77); */
+  color:  rgb(218 165 32 / 70%);
+  background-color: #fff;
 }
 
 .photoBanner {
@@ -377,10 +379,45 @@ header {
 #collection {
   padding-top: 40px;
   font-size: 45px;
-  color: #5b5d69;
+  color: #293160;
   font-weight: bold;
 font-family: 'Times New Roman', Times, serif;
+position: relative;
 
+}
+.para {
+  position: relative;
+ text-align: center;
+}
+.para h2::after {
+content: "";
+left: 34%;
+background-color: darkgoldenrod;
+width: 0;
+height: 1px;
+margin: auto;
+transition: .7s linear;
+display: block;
+position: absolute;
+}
+.para h2::before {
+  content: "";
+  right: 34%;
+  background-color: darkgoldenrod;
+  position: absolute;
+  width: 0;
+  height: 1px;
+  margin: auto;
+  transition: .7s ease-in;
+  display: block;
+  }
+.para h2:hover::after{
+  width: 32%;
+  height: 2px;
+}
+.para h2:hover::before{
+  width: 32%;
+  height: 2px;
 }
 /* cards style  */
 
@@ -478,13 +515,13 @@ font-family: 'Times New Roman', Times, serif;
   font-size: 16px;
   color: rgb(20 20 56);
   text-align: center;
-  line-height: 1.2;
+  line-height: 1.1;
   font-weight: 500;
 }
 
 .content button {
   font-size: 18px;
-  width: 70%;
+  width: 50%;
   margin-top: 20px;
   border-radius: 15px;
   transition: 700ms;
@@ -514,7 +551,6 @@ footer h2 {
   margin: auto;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 30px;
 }
 .Company h2 {
     text-align: center;
@@ -575,7 +611,7 @@ footer h2 {
   font-size: 17px;
   color: #fff;
   font-weight: 700;
-  margin-left: -50px;
+
 }
 
 

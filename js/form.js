@@ -26,6 +26,10 @@ let first_name = event.target.first_name.value;
   swal("Good job!", "Your submit done!", "success");
 
   // window.location.assign('index.html')
+  if (first_name){
+    document.querySelector('.cart span .name').textContent = first_name;
+
+  }
 
 //   let newForm = new Gemstone(first_name,last_name,company,Email,area_code,phone,subject);
 

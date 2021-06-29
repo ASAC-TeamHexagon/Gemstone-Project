@@ -96,12 +96,6 @@ ProductAdd.prototype.render = function () {
 
 }
 
-function Navigation(e,message)
-{
-    alert(ProductAdd.name);
-   localStorage.setItem(ProductAdd.name);
-}
-
 
 let ratingStars = [...document.getElementsByClassName("rating__star")];
 
@@ -151,7 +145,6 @@ emeraldRing3.render();
 
 
 
-
 function formSubmission(event) {
     event.preventDefault();
     let name = event.target.itemName.value;
@@ -175,8 +168,6 @@ function getList() {
     let data = JSON.parse(localStorage.getItem('product'));
     console.log(data)
     if (data) {
-        // data  = ProductAdd.all;
-
         for (let i = 0; i < data.length; i++) {
 
             let newProductAdd1 = new ProductAdd(data[i].name, data[i].price, data[i].image, data[i].category, data[i].description, data[i].inCart);
@@ -185,8 +176,8 @@ function getList() {
     }
 
 }
-getList()
 
+getList()
 
 let carts = document.querySelectorAll('.fa-shopping-bag');
 
@@ -256,7 +247,7 @@ function totalCost(pro) {
         localStorage.setItem('totalCost', pro.price);
     }
 }
-
+onLoadCartNumbers()
 
 
 
