@@ -346,7 +346,7 @@ header {
 
 .paragraph {
   background-image: url(../img/paragraphBackground.png);
-  /* background-attachment: fixed; */
+  background-attachment: fixed;
   margin-top:5%;
   margin-bottom:1%;
   height: 400px;
@@ -703,7 +703,11 @@ footer h2 {
   cursor: pointer;
 }
 
-
+.btns{
+  position : relative;
+  justify-content: center;
+  margin-top: 10px;
+}
 
 .close{
   width: 25px;
@@ -714,9 +718,11 @@ footer h2 {
   border: none ;
   border-radius: 5px;
   color: white;
-  font-size: 18px;
+  font-size: 15px;
   text-align: center;
   justify-content: center;
+  cursor: pointer;
+  padding: 5px;
   
 }
 
@@ -739,7 +745,6 @@ button:active {
   align-items: center;
   position: relative;
   justify-content: center;
-  margin-left: 400px;
   padding:10px;
 
 }

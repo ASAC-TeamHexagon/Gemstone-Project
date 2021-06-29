@@ -1,159 +1,94 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap");
 
-* {
-  margin: 0;
-  padding: 0;
-}
-.cart span {
+
+/* .cart span  {
   color: black;
   width: 80px;
   height: 80px;
+  font-size:20px;
   border-radius: 50%;
-  background: #fff;
-}
+  background: #DE9D3C;
+  justify-content: center;
+  text-transform: capitalize;
+} */
+
+
 .name {
   transform: translate(26%, 33%);
   color: #000;
   font-size: 24px;
 }
 
-body {
-  font-family: sans-serif;
-  margin-top: 40px;
-  line-height: 1.5;
+
+  
+/* for the form  */
+
+.topForm{
+max-height: 600px;
+max-width:400px;
+  justify-content: center;
+  margin-bottom: 40px;
 }
-.regform {
-  text-align: center;
+#form h2{
+  padding :20px;
 }
 
-.topForm {
-  position: relative;
-  width: 1200px;
-  margin: auto;
-  height: 60vh;
+#form{
+  max-height: 500px;
+  max-width:350px;
+    border: solid 2px #DE9D3C;
+    border-radius: 10px;
+    justify-content: center;
+    margin :auto;
+    padding:10px;
+  
 }
-#form {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 500px;
-}
-.regform h1 {
-  font-size: 28px;
-  color: rgb(29, 29, 77);
-  font-weight: 600;
-}
-.header {
-  text-align: left;
-  font-size: 21px;
-  color: rgb(0, 0, 75);
-  margin-bottom: 10px;
-  animation: m 2s ease;
-}
-@keyframes m {
-  0% {
-    opacity: 0;
-    transform: translateX(-2000px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0px);
-  }
-}
-.header::after {
-  content: "";
-  height: 2px;
-  width: 0%;
-  background-color: rgb(29, 29, 77);
+input[type="text"],[type="password"]
+ {
   display: block;
-  transition: 0.7s;
-  margin: auto;
-}
-.header:hover::after {
-  width: 100%;
-}
-input {
-  width: 200px;
-  height: 40px;
-  border: 1px solid rgb(218 165 32 / 70%);
-  animation: h 2s ease;
-}
-@keyframes h {
-  0% {
-    opacity: 0;
-    transform: translateX(2000px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0px);
-  }
-}
-::placeholder {
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  padding: 4px;
+  border: none;
+  border-bottom: 1px solid #de9d3c;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
   font-size: 15px;
-  text-transform: capitalize;
-  color: rgb(120, 120, 124);
-  font-family: cursive;
-  font-weight: 600;
-  text-align: center;
+  transition: 0.2s ease;
+  width: 300px;
 }
-.option {
-  width: 200px;
-  height: 40px;
-  border: 1px solid rgb(218 165 32 / 70%);
-  font-size: 13px;
-  text-transform: capitalize;
-  color: rgb(120, 120, 124);
-  font-family: cursive;
-  font-weight: 600;
-  text-align: center;
-  animation: h 2s ease;
+
+
+
+
+
+
+
+
+#button{
+  margin-top: 28px;
+    width: 150px;
+    height: 32px;
+    background: #DE9D3C;
+    border: none;
+    border-radius: 5px;
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: 0.1s ease;
+    cursor: pointer;
+    margin-bottom: 20px;
 }
-@keyframes h {
-  0% {
-    opacity: 0;
-    transform: translateX(2000px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0px);
-  }
-}
-.option option {
-  font-size: 13px;
-  text-transform: capitalize;
-  color: rgb(120, 120, 124);
-  font-family: cursive;
-  font-weight: 600;
-  text-align: center;
-}
-.bnt {
-  text-align: center;
-  margin-top: 20px;
-  margin-left: 50px;
-}
-.bnt button {
-  width: 100px;
-  height: 40px;
-  cursor: pointer;
-  border-radius: 10px;
-  font-size: 15px;
-  border: 1px solid rgb(218 165 32 / 70%);
-  background-color: #fff;
-  transition: 0.5s linear;
-  animation: b 2s ease;
-}
-@keyframes b {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.bnt button:hover {
-  color: rgb(6, 6, 173);
-  font-size: 17px;
-  width: 110px;
-  border: 1px solid;
-}
+  
+
+
+
+
+
+
+
+
+
+
+
