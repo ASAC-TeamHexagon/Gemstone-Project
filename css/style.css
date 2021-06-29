@@ -551,7 +551,6 @@ footer h2 {
   margin: auto;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 30px;
 }
 .Company h2 {
     text-align: center;
@@ -612,5 +611,5 @@ footer h2 {
   font-size: 17px;
   color: #fff;
   font-weight: 700;
-  margin-left: -50px;
+
 }
