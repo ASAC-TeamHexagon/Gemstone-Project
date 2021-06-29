@@ -577,3 +577,72 @@ footer h2 {
   font-weight: 700;
   margin-left: -50px;
 }
+
+
+
+/* for the bottom banner */
+
+.gemSliderContainer {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+  
+@-webkit-keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-250px * 7));
+            transform: translateX(calc(-250px * 7));
+  }
+}
+
+@keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-250px * 7));
+            transform: translateX(calc(-250px * 7));
+  }
+}
+.sliderGem {
+  display: flex;
+  height: 150px;
+  width: 100%;
+  overflow: hidden;
+  padding: 10px;
+}
+.sliderGem::before, .sliderGem::after {
+  content: "";
+  height: 150px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+.sliderGem::after {
+  right: 0;
+  top: 0;
+  -webkit-transform: rotateZ(180deg);
+          transform: rotateZ(180deg);
+}
+.sliderGem::before {
+  left: 0;
+  top: 0;
+}
+.sliderGem .slide-track {
+  -moz-animation: scroll 40s linear infinite;
+  -webkit-animation: scroll 40s linear infinite;
+          animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
+.sliderGem .slideGem {
+  height: 150px;
+  width: 250px;
+}
+  
+
