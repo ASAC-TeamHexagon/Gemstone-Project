@@ -17,7 +17,7 @@ function ProductAdd(name, price, image, category, description) {
 }
 ProductAdd.all = [];
 
-ProductAdd.prototype.render = function () {
+ProductAdd.prototype.render = function() {
     let container = document.createElement('div');
     container.className = "product-card";
     products.appendChild(container);
@@ -79,7 +79,7 @@ ProductAdd.prototype.render = function () {
     cartIcon.className = "fas fa-shopping-bag"
     cart.appendChild(cartIcon);
 
-    let space =document.createElement('br')
+    let space = document.createElement('br')
     productLinks.appendChild(space);
 
     let rate = document.createElement('span')
@@ -87,7 +87,7 @@ ProductAdd.prototype.render = function () {
     productLinks.appendChild(rate);
 
     for (let i = 0; i < Math.floor(Math.random() * 5) + 1; i++) {
-       
+
         let stars = document.createElement('i');
         stars.className = "rating__star fas fa-star";
         rate.appendChild(stars);
@@ -118,13 +118,13 @@ function executeRating(stars) {
 }
 
 
+
 let amber = new ProductAdd('Hoop Earrings', 260, 'img2/Hoop Earrings.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
 let emeraldRing = new ProductAdd('Womens Sunshine Floral ', 1000, 'img2/Womens Sunshine Floral.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
 let emeraldRing2 = new ProductAdd('Sterling Silver ', 8000, 'img2/Sterling Silver.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
 let amber2 = new ProductAdd('Citrine Birthstone Gem', 8000, 'img2/Citrine Birthstone Gem.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
 let amber3 = new ProductAdd('Ruby Gemstone', 210, 'img2/Ruby Gemstone.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
 let emeraldRing3 = new ProductAdd('Amethyst Gemstone', 6000, 'img2/Amethyst Gemstone.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
-
 
 
 
@@ -256,19 +256,18 @@ var btn = document.getElementById("btnOpen");
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
-btn.onclick = function () {
+btn.onclick = function() {
     modal.style.display = "block";
 }
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function () {
+span.onclick = function() {
     modal.style.display = "none";
 }
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
+window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
 }
-
