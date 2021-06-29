@@ -20,9 +20,11 @@ a {
 }
 .product-card {
   width: 270px;
+  /* height: 570px; */
   position: relative;
   box-shadow: 0 2px 7px #dfdfdf;
   margin: 60px auto;
+  margin-bottom: -20px ;
   background: #fafafa;
 }
 
@@ -48,8 +50,10 @@ a {
 }
 
 .product-details {
-
-  padding: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left:30px;
+  padding-right:30px;
 
 }
 
@@ -146,7 +150,12 @@ a {
     margin-top: 28px;
     width: 150px;
     height: 32px;
+    background: #DE9D3C;
     border: none;
+    border-radius: 5px;
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
     text-transform: uppercase;
     transition: 0.1s ease;
     cursor: pointer;
@@ -253,13 +262,7 @@ button:active {
 }
 
 
-/* The Close Button */
-.close {
-  font-weight: bold;
-  position: absolute;
-  top: 480px;
-  left: 400px;
-}
+
 
  
  

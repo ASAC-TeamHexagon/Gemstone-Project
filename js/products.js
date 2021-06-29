@@ -6,7 +6,7 @@ let products = document.getElementById('products');
 
 function ProductAdd(name, price, image, category, description) {
     this.name = name;
-    this.price = price;
+    this.price = price + '  ₿';
     this.image = image;
     this.category = category;
     this.description = description;
@@ -121,12 +121,12 @@ function executeRating(stars) {
 
 
 
-let amber = new ProductAdd('Hoop Earrings', 260, 'img2/Hoop Earrings.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
-let emeraldRing = new ProductAdd('Womens Sunshine Floral ', 1000, 'img2/Womens Sunshine Floral.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
-let emeraldRing2 = new ProductAdd('Sterling Silver ', 8000, 'img2/Sterling Silver.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
-let amber2 = new ProductAdd('Citrine Birthstone Gem', 8000, 'img2/Citrine Birthstone Gem.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
-let amber3 = new ProductAdd('Ruby Gemstone', 210, 'img2/Ruby Gemstone.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
-let emeraldRing3 = new ProductAdd('Amethyst Gemstone', 6000, 'img2/Amethyst Gemstone.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
+let amber = new ProductAdd('Hoop Earrings', 1, 'img2/Hoop Earrings.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
+let emeraldRing = new ProductAdd('Sunshine Floral ', 2, 'img2/Womens Sunshine Floral.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
+let emeraldRing2 = new ProductAdd('Amber Stone ', 0.5, 'img/amber.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
+let amber2 = new ProductAdd('Citrine Birthstone Gem', 2, 'img2/Citrine Birthstone Gem.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
+let amber3 = new ProductAdd('Ruby Gemstone', 1.5, 'img2/Ruby Gemstone.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
+let emeraldRing3 = new ProductAdd('Amethyst Gemstone', 3, 'img2/Amethyst Gemstone.png', 'Gemstones', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!');
 amber.render();
 emeraldRing.render();
 emeraldRing2.render();
@@ -145,7 +145,7 @@ function formSubmission(event) {
     let price = event.target.GemPrice.value;
     let description = event.target.GemDescription.value;
 
-    let newProductAdd = new ProductAdd(name, price + "₿", image, category, description);
+    let newProductAdd = new ProductAdd(name, price, image, category, description);
     newProductAdd.render();
 
     swal("Good job!", "Your submit done!", "success");
