@@ -4,13 +4,13 @@ let products = document.getElementById('products');
 
 
 
-function ProductAdd(name, price, image, category, description, inCart) {
+function ProductAdd(name, price, image, category, description) {
     this.name = name;
-    this.price = price +"  $";
+    this.price = price;
     this.image = image;
     this.category = category;
     this.description = description;
-    this.inCart = inCart;
+    this.inCart = 0;
 
     ProductAdd.all.push(this);
 
@@ -60,6 +60,11 @@ ProductAdd.prototype.render = function () {
     productPrice.className = "product-price";
     productInfo.appendChild(productPrice);
     productPrice.textContent = this.price;
+
+    let currency = document.createElement('span');
+    productPrice.appendChild(currency);
+    currency.textContent = '₿';
+
 
     let productLinks = document.createElement('div');
     productLinks.className = "product-links";
@@ -141,7 +146,7 @@ function formSubmission(event) {
     let price = event.target.GemPrice.value;
     let description = event.target.GemDescription.value;
 
-    let newProductAdd = new ProductAdd(name, price, image, category, description, 0);
+    let newProductAdd = new ProductAdd(name, price, image, category, description);
     newProductAdd.render();
 
     swal("Good job!", "Your submit done!", "success");

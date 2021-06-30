@@ -92,17 +92,17 @@ function displayCart() {
             <img src="${item.image}">
             </div>
             
-            <div class="price">${item.price}</div>
+            <div class="price">${item.price}₿</div>
             
             <div class="quantity"><i class="fas fa-chevron-circle-left"></i>${item.inCart}<i class="fas fa-chevron-circle-right"></i></div>
 
-            <div class="total">${item.inCart * item.price}</div>
+            <div class="total">${item.inCart * item.price}₿</div>
             `;
         });
     }
     productContainer.innerHTML += `
      <div class ="basketTotalContainrt">
-      Basket Total<div> ${cartCost}</div>
+      Basket Total<div> ${cartCost}₿</div>
      
      </div>
      

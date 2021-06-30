@@ -110,7 +110,10 @@ a {
   font-size: 18px;
   color: #fbb72c;
   font-weight: 600;
+  display:inline-flex;
 }
+
+
 
 .product-links {
   text-align: right;

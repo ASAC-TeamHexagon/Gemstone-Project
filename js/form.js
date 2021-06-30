@@ -31,12 +31,14 @@ function addNewUser(e) {
   swal("Good job!", "Your submit done!", "success");
 
   // window.location.assign('index.html')
-  if (first_name) {
-    document.querySelector('.cart span #nameText')."Welocome "+textContent = first_name;
-    
+  let headName = document.querySelector('.cart span .nameText');
 
+  if (first_name) {
+   headName.textContent=first_name;    
   }
-  
+    
+   headName.setAttribute("style","text-Transform: capitalize;")
+      
   form.reset();
 
   //   let newForm = new Gemstone(first_name,last_name,company,Email,area_code,phone,subject);
